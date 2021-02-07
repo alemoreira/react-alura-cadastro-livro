@@ -1,93 +1,108 @@
 import "purecss/build/pure-min.css";
 import "purecss/site/static/layouts/side-menu/styles.css";
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div id="layout">
-      <a href="#menu" id="menuLink" className="menu-link">
-        <span></span>
-      </a>
+class App extends Component {
+  constructor() {
+    super();
 
-      <div id="menu">
-        <div className="pure-menu">
-          <a className="pure-menu-heading" href="#company">
-            Company
-          </a>
+    this.state = {
+      autores: [
+        { name: "Alberto Souza", email: "alberto.souza@caelum.com.br" },
+      ],
+    };
+  }
 
-          <ul className="pure-menu-list">
-            <li className="pure-menu-item">
-              <a href="#home" className="pure-menu-link">
-                Home
-              </a>
-            </li>
-            <li className="pure-menu-item">
-              <a href="#about" className="pure-menu-link">
-                Autor
-              </a>
-            </li>
+  render() {
+    return (
+      <div id="layout">
+        <a href="#menu" id="menuLink" className="menu-link">
+          <span></span>
+        </a>
 
-            <li className="pure-menu-item menu-item-divided pure-menu-selected">
-              <a href="/servicos" className="pure-menu-link">
-                Livro
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+        <div id="menu">
+          <div className="pure-menu">
+            <a className="pure-menu-heading" href="#company">
+              Company
+            </a>
 
-      <div id="main">
-        <div className="header">
-          <h1>Cadastro de Autores</h1>
-          <h2>Cadastro dos Autores para cadastro dos Livros</h2>
-        </div>
+            <ul className="pure-menu-list">
+              <li className="pure-menu-item">
+                <a href="#home" className="pure-menu-link">
+                  Home
+                </a>
+              </li>
+              <li className="pure-menu-item">
+                <a href="#about" className="pure-menu-link">
+                  Autor
+                </a>
+              </li>
 
-        <div id="content" className="content">
-          <div className="pure-form pure-form-aligned">
-            <form className="pure-form pure-form-aligned">
-              <div className="pure-control-group">
-                <label htmlFor="nome">Nome</label>
-                <input id="nome" type="text" name="nome" value="" />
-              </div>
-              <div className="pure-control-group">
-                <label htmlFor="email">Email</label>
-                <input id="email" type="email" name="email" value="" />
-              </div>
-              <div className="pure-control-group">
-                <label htmlFor="senha">Senha</label>
-                <input id="senha" type="password" name="senha" />
-              </div>
-              <div className="pure-control-group">
-                <label></label>
-                <button
-                  type="submit"
-                  className="pure-button pure-button-primary"
-                >
-                  Gravar
-                </button>
-              </div>
-            </form>
-          </div>
-
-          <div>
-            <table className="pure-table">
-              <thead>
-                <tr>
-                  <th>Nome</th>
-                  <th>email</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Alberto</td>
-                  <td>alberto.souza@caelum.com.br</td>
-                </tr>
-              </tbody>
-            </table>
+              <li className="pure-menu-item menu-item-divided pure-menu-selected">
+                <a href="/servicos" className="pure-menu-link">
+                  Livro
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
+
+        <div id="main">
+          <div className="header">
+            <h1>Cadastro de Autores</h1>
+            <h2>Cadastro dos Autores para cadastro dos Livros</h2>
+          </div>
+
+          <div id="content" className="content">
+            <div className="pure-form pure-form-aligned">
+              <form className="pure-form pure-form-aligned">
+                <div className="pure-control-group">
+                  <label htmlFor="nome">Nome</label>
+                  <input id="nome" type="text" name="nome" value="" />
+                </div>
+                <div className="pure-control-group">
+                  <label htmlFor="email">Email</label>
+                  <input id="email" type="email" name="email" value="" />
+                </div>
+                <div className="pure-control-group">
+                  <label htmlFor="senha">Senha</label>
+                  <input id="senha" type="password" name="senha" />
+                </div>
+                <div className="pure-control-group">
+                  <label></label>
+                  <button
+                    type="submit"
+                    className="pure-button pure-button-primary"
+                  >
+                    Gravar
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div>
+              <table className="pure-table">
+                <thead>
+                  <tr>
+                    <th>nome</th>
+                    <th>email</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.autores.map((autor) => (
+                    <tr>
+                      <td>{autor.name}</td>
+                      <td>{autor.email}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
