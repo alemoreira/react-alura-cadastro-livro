@@ -13,6 +13,12 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    fetch("http://cdc-react.herokuapp.com/api/autores")
+      .then((response) => response.json())
+      .then((body) => this.setState({ autores: body }));
+  }
+
   render() {
     return (
       <div id="layout">
