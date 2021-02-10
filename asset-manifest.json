@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-alura-cadastro-livro/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/react-alura-cadastro-livro/static/js/main.bc3a160a.chunk.js",
-    "main.js.map": "/react-alura-cadastro-livro/static/js/main.bc3a160a.chunk.js.map",
+    "main.js": "/react-alura-cadastro-livro/static/js/main.fb616f6d.chunk.js",
+    "main.js.map": "/react-alura-cadastro-livro/static/js/main.fb616f6d.chunk.js.map",
     "runtime-main.js": "/react-alura-cadastro-livro/static/js/runtime-main.98e2e2af.js",
     "runtime-main.js.map": "/react-alura-cadastro-livro/static/js/runtime-main.98e2e2af.js.map",
     "static/css/2.7fa0cf60.chunk.css": "/react-alura-cadastro-livro/static/css/2.7fa0cf60.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.7fa0cf60.chunk.css",
     "static/js/2.df56c602.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.bc3a160a.chunk.js"
+    "static/js/main.fb616f6d.chunk.js"
   ]
 }
