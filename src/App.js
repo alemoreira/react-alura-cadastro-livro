@@ -8,7 +8,7 @@ class App extends Component {
 
     this.state = {
       autores: [
-        { name: "Alberto Souza", email: "alberto.souza@caelum.com.br" },
+        { id: 1, nome: "Alberto Souza", email: "alberto.souza@caelum.com.br" },
       ],
     };
   }
@@ -58,15 +58,20 @@ class App extends Component {
               <form className="pure-form pure-form-aligned">
                 <div className="pure-control-group">
                   <label htmlFor="nome">Nome</label>
-                  <input id="nome" type="text" name="nome" value="" />
+                  <input id="nome" type="text" name="nome" defaultValue="" />
                 </div>
                 <div className="pure-control-group">
                   <label htmlFor="email">Email</label>
-                  <input id="email" type="email" name="email" value="" />
+                  <input id="email" type="email" name="email" defaultValue="" />
                 </div>
                 <div className="pure-control-group">
                   <label htmlFor="senha">Senha</label>
-                  <input id="senha" type="password" name="senha" />
+                  <input
+                    id="senha"
+                    type="password"
+                    name="senha"
+                    defaultValue=""
+                  />
                 </div>
                 <div className="pure-control-group">
                   <label></label>
@@ -90,8 +95,8 @@ class App extends Component {
                 </thead>
                 <tbody>
                   {this.state.autores.map((autor) => (
-                    <tr>
-                      <td>{autor.name}</td>
+                    <tr key={autor.id}>
+                      <td>{autor.nome}</td>
                       <td>{autor.email}</td>
                     </tr>
                   ))}
